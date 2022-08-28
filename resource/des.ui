@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>465</width>
+    <height>421</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>WhatsThisCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>YouTube Downloader</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/icon/resource/icon.ico</normaloff>:/icon/resource/icon.ico</iconset>
+  </property>
+  <property name="statusTip">
+   <string>Введите ссылку на видео</string>
+  </property>
+  <property name="whatsThis">
+   <string>Введите ссылку на видео</string>
+  </property>
+  <property name="accessibleName">
+   <string>Введите ссылку на видео</string>
+  </property>
+  <property name="accessibleDescription">
+   <string>Введите ссылку на видео</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QFormLayout" name="formLayout">
+    <item row="3" column="0" colspan="2">
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="font">
+       <font>
+        <family>Segoe MDL2 Assets</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:0, stop:0.482955 rgba(165, 17, 82, 255), stop:1 rgba(255, 255, 255, 255));
+border-radius:10;
+border:3;
+</string>
+      </property>
+      <property name="text">
+       <string>YouTube Video Downloader</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="res.qrc">:/youtube/resource/loge.jpg</pixmap>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0" colspan="2">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:0, stop:0.482955 rgba(165, 17, 82, 255), stop:1 rgba(255, 255, 255, 255));
+border-radius:2px</string>
+      </property>
+      <property name="text">
+       <string>Выберите ваше разрешение</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0" colspan="2">
+     <widget class="QComboBox" name="comboBox">
+      <property name="minimumSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius:5</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>720p</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>480p</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>360p</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>240p</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>144p</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="13" column="0" colspan="2">
+     <widget class="QLineEdit" name="lineEdit_4">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:0, stop:0.482955 rgba(165, 17, 82, 255), stop:1 rgba(255, 255, 255, 255));</string>
+      </property>
+      <property name="text">
+       <string>Выберите папку для сохранения файла</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="0" colspan="2">
+     <widget class="QPushButton" name="open_folder">
+      <property name="minimumSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{color:black}
+QPushButton:hover{background-color:orange;color:cyan;border-radius:8}
+QPushButton:pressed{background-color:gray;color:yellow,border-radius:6}</string>
+      </property>
+      <property name="text">
+       <string>Open folder</string>
+      </property>
+      <property name="icon">
+       <iconset resource="res.qrc">
+        <normaloff>:/icon/resource/icon.ico</normaloff>:/icon/resource/icon.ico</iconset>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="0" colspan="2">
+     <widget class="QPlainTextEdit" name="plainTextEdit">
+      <property name="minimumSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="0" colspan="2">
+     <widget class="QPushButton" name="download_button">
+      <property name="minimumSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{color:back}
+QPushButton:hover{background-color:darkblue;color:pink;border-radius:10;}
+QPushButton:pressed{background-color:gray;color:yellow;border-radius:10}</string>
+      </property>
+      <property name="text">
+       <string>Download video</string>
+      </property>
+      <property name="icon">
+       <iconset resource="res.qrc">
+        <normaloff>:/icon/resource/download_arrow_14460.ico</normaloff>:/icon/resource/download_arrow_14460.ico</iconset>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="0" colspan="2">
+     <widget class="QProgressBar" name="progressBar">
+      <property name="styleSheet">
+       <string notr="true">QProgressBar{
+	
+    border: 2px solid grey;
+    border-radius: 3px;
+    text-align: center;}
+::chunk {
+    background-color: 
+    qlineargradient(x0: 0, x2: 1, 
+     stop: 0 green, stop: 0.6 green,
+                    stop: 0.8 orange, 
+                    stop: 1 red
+                    )};</string>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+      <property name="textVisible">
+       <bool>true</bool>
+      </property>
+      <property name="textDirection">
+       <enum>QProgressBar::TopToBottom</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="0" colspan="2">
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Введите ссылку на видео</string>
+      </property>
+      <property name="statusTip">
+       <string>Введите ссылку на видео</string>
+      </property>
+      <property name="whatsThis">
+       <string>Введите ссылку на видео</string>
+      </property>
+      <property name="accessibleName">
+       <string>Введите ссылку на видео</string>
+      </property>
+      <property name="accessibleDescription">
+       <string extracomment="Введите ссылку на видео">Введите ссылку на видео</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="inputMask">
+       <string comment="Введите ссылку на видео" extracomment="Введите ссылку на видео"/>
+      </property>
+      <property name="text">
+       <string comment="Введите ссылку на видео" extracomment="Введите ссылку на видео">Вставьте сюда ссылку на видео</string>
+      </property>
+      <property name="cursorPosition">
+       <number>29</number>
+      </property>
+      <property name="placeholderText">
+       <string comment="Введите ссылку на видео" extracomment="Введите ссылку на видео"/>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+   <zorder>label</zorder>
+   <zorder>lineEdit_2</zorder>
+   <zorder>lineEdit</zorder>
+   <zorder>comboBox</zorder>
+   <zorder>lineEdit_4</zorder>
+   <zorder>open_folder</zorder>
+   <zorder>plainTextEdit</zorder>
+   <zorder>download_button</zorder>
+   <zorder>progressBar</zorder>
+   <zorder>lineEdit_3</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>465</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
